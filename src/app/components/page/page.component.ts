@@ -48,14 +48,7 @@ export class PageComponent {
 
   constructor(private activateRoute: ActivatedRoute){
     this.subscription = activateRoute.params.subscribe(params=>this.id=params['id'] ? Number(params['id']) : undefined);
-    console.log(this.id)
   }
-
-
-  images_1 = ["../../../assets/images/vk.svg", "../../../assets/images/discord.svg"];
-  images_2 = ["../../../assets/images/vk.svg", "../../../assets/images/youtube.svg"];
-  images_3 = ["../../../assets/images/youtube.svg"];
-  images_4 = ["../../../assets/images/discord.svg"];
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
