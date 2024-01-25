@@ -1,0 +1,25 @@
+<div class="page">
+    <div class="page__container">
+        <app-header></app-header>
+        <app-hello *ngIf="id === 1 || id === 2" [mainImage]="mainImages[1]" [imageNum]="1"></app-hello>
+        <app-hello *ngIf="id === 3 || id === 4" [mainImage]="mainImages[2]" [imageNum]="2" ></app-hello>
+        <app-hello *ngIf="id === 5 || id === 6" [mainImage]="mainImages[3]" [imageNum]="3"></app-hello>
+        <section class="page__info">
+            <div class="page__confirm">
+                <p class="page__confirm-text">Не забудьте пройти процедуру подтверждения участия в турнире</p>
+                <a href="" class="page__confirm-link">
+                    перейти
+                </a>
+            </div>
+            <div class="page__panels" *ngIf="id !== undefined">
+                <app-panel *ngFor="let i of arr"
+                    [title]="titles[i]" 
+                    [leftImages]="leftImages[i]" 
+                    [rightImage]="rightImages[i]"
+                    [id]="id">
+                </app-panel>
+            </div>
+        </section>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,68 @@
+@import '../../../styles/variables.less';
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 161px;
+    height: 98px;
+    padding: 10px 10px 6px 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 14%);
+    border-radius: 8px;
+
+    
+    &__title {
+        display: flex;
+        align-items: center;
+        font-size: 0.93rem;
+        line-height: 15px;
+        margin: 0 0 3px 0;
+        height: 32px;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__right-contacts {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 41px;
+        height: 45px;
+    }
+    &__left-contacts {
+        display: flex;
+        gap: 9px;
+        margin-top: 5px;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .panel {
+        width: calc(161px * 1.3);
+        height: calc(98px * 1.3);
+        
+        &__title {
+            line-height: 18px;
+            height: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 390px){
+    .panel {
+        width: calc(161px * 0.8);
+        height: calc(98px * 0.8);
+    }
+}

@@ -1,0 +1,63 @@
+@import './styles/normalize.css';
+@import './styles/variables.less';
+
+* {
+    box-sizing: border-box;
+    font-family: @TextSansRegular;;
+    color: @black-color;
+}
+
+html {
+    height: 100%;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Tele2 TextSans Bold';
+    src: url('./assets/fonts/tele2_textsans-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tele2 TextSans Regular';
+    src: url('./assets/fonts/tele2_textsans-regular.ttf') format('truetype');
+}
+
+@TextSansBold: 'Tele2 TextSans Bold';
+@TextSansRegular: 'Tele2 TextSans Regular';
+
+h1, h2{
+    font-family: @TextSansBold;
+    font-size: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    html {
+        font-size: 10px;
+    }
+}

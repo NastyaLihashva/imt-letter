@@ -1,0 +1,87 @@
+@import '../../../styles/variables.less';
+
+.hello {
+    display: flex;
+    width: 100%;
+    min-height: 181px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @hello-color;
+    border-radius: 12px;
+    padding: 4px 8px 0 30px;
+    margin-bottom: 25px;
+
+    &__title { 
+        display: flex;
+        max-width: 207px;
+        align-items: center;
+        line-height: 45px;
+        margin-top: 17px;
+    }
+
+    &__img {
+        height: 100%; 
+        display: flex;
+        justify-content: flex-end;
+    
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .hello {
+        &__title {
+            line-height: 65px;
+            max-width: 600px;
+        }
+    }
+}
+
+@media screen and (min-width: 900px){
+    .hello {
+        &__title {
+            max-width: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px){
+    .hello {
+        min-height: auto;
+        &__title { 
+            line-height: 35px;
+        }
+
+        &__img {
+            min-width: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    .hello {
+        &__title { 
+            line-height: 25px;
+        }
+
+        &__img {
+            margin-left: 30px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 380px){
+    .hello { 
+        &__title { 
+            font-size: 1.7rem;
+            line-height: 17px;
+        }
+    }
+}

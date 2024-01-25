@@ -1,0 +1,75 @@
+@import '../../../styles/variables.less';
+
+:host {
+    background-color: @black-color;
+    padding: 30px 20px 38px 20px;
+    margin-top: auto;
+    max-height: 181px;
+}
+
+a {
+    color: @white-color;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    &__tele2 {
+        display: flex;
+        margin-bottom: 15px;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin: 8px 0 0 0;
+        color: @white-color;
+        font-size: 0.93rem;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        margin: 0 0 13px 0;
+        padding: 0;
+    
+        a {
+            font-size: 0.73rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        max-width: 60%;
+    
+        p, a {
+            font-size: 0.67rem;
+            line-height: 14px;
+            color: @white-color;
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    :host {
+        padding: 30px 30px 38px 30px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .footer {
+        &__list {
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    :host {
+        padding: 30px 52px 38px;
+    }
+}

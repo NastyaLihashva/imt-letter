@@ -1,0 +1,18 @@
+<div class="panel">
+    <h2 class="panel__title">{{title}}</h2>
+    <div class="panel__contacts">
+        <div class="panel__left-contacts">
+            <div *ngFor = "let img of leftImages">
+                <svg *ngIf="id % 2 === 0" width="31" height="30">
+                    <use [attr.xlink:href]="img + 'Black'"></use>
+                </svg>
+                <svg *ngIf="id % 2 !== 0" width="31" height="30">
+                    <use [attr.xlink:href]="img"></use>
+                </svg>
+            </div>
+        </div>
+        <div *ngFor = "let img of rightImage" class="panel__right-contacts">
+            <img [src]="img" alt="">
+        </div>
+    </div>
+</div>
